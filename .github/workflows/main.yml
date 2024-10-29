@@ -11,13 +11,16 @@ jobs:
 
     steps:
       - name: Info Stage
-        run: echo "Branch: ${{ github.ref }}, Build ID: ${{ github.run_id }}"
+        run: |
+          echo "Branch: ${{ github.ref }}"
+          echo "Build ID: ${{ github.run_id }}"
 
       - name: Build Stage
-        run: echo "This is Build stage"
+        run: echo "This is the Build stage"
 
       - name: Test Stage
-        run: echo "This is Test stage"
+        run: echo "This is the Test stage"
 
       - name: Deploy Stage
-        run: echo "This is Deploy stage"
+        run: echo "This is the Deploy stage"
+
